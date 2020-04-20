@@ -14,7 +14,7 @@ EXPERIMENTAL!
 
 ([Make sure you have snap installed first](https://snapcraft.io/docs/core/install))
 
-![Trackmania United Forever](screenshot.jpg?raw=true "Track Mania Nations Forever")
+![Trackmania United Forever](screenshot.jpg?raw=true "TMUF")
 
 ## How to install
 
