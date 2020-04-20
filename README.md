@@ -14,7 +14,7 @@ THIS IS NOT AN OFFICIAL RELEASE, USE AT YOUR OWN RISK
 
 ([Make sure you have snap installed first](https://snapcraft.io/docs/core/install))
 
-![Trackmania United Forever](screenshot.png?raw=true "Track Mania Nations Forever")
+![Trackmania United Forever](screenshot.jpg?raw=true "Track Mania Nations Forever")
 
 ## How to install
 
