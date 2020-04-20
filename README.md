@@ -28,7 +28,7 @@ THIS IS NOT AN OFFICIAL RELEASE, USE AT YOUR OWN RISK
 
 
 
-    snap install tmunitedforever --edge
-    snap connect tmunitedforever:joystick
-    snap connect tmunitedforever:pulseaudio
+    * snap install tmunitedforever --edge
+    * snap connect tmunitedforever:joystick
+    * snap connect tmunitedforever:pulseaudio
 
