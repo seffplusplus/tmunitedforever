@@ -1,11 +1,11 @@
 #!/bin/bash
 
 TITLE="TrackMania Nations Forever"
-NOTICE="The ${TITLE} snap is experimental, built
-with development releases of upstream WINE and may not function as
-expected.\n\nIf you encounter issues please report them on the
+NOTICE="The Trackmania United Forever snap is as experimental as the TMNF one. So far it's been only been tested in Ubuntu 18.04
+\n\nIf you encounter issues please report them directly on the
 ${TITLE} snap issue tracker:
-\n\nhttps://github.com/Snapcrafters/tmnationsforever"
+\n\nhttps://github.com/Snapcrafters/tmnationsforever 
+\nso I can update the files ASAP"
 
 function install_app() {
   # Install additional requirements via winetricks here
@@ -218,7 +218,7 @@ if [ ! -f "${WINEPREFIX}/drive_c/windows/win.ini" ]; then
   fi
 else
   # Notification
-  notify-send --icon "${SNAP}/meta/gui/tmnationsforever.png" --expire-time=15000 "${TITLE}" "${NOTICE}"
+  notify-send --icon "${SNAP}/meta/gui/tmunitedforever.png" --expire-time=15000 "Trackmania United Forever" "${NOTICE}"
 fi
 
 # Launch wineboot/winecfg/winetricks if requested.

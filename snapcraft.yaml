@@ -1,6 +1,6 @@
-name: tmnationsforever
+name: tmunitedforever
 version: '2.11.26'
-summary: TrackMania Nations Forever
+summary: Trackmania United Forever
 description: |
  The most popular online PC racing game. It fuels 7 different racing
  environments; hundreds of thousands of tracks and millions of players to
@@ -19,12 +19,12 @@ architectures:
 base: core
 
 apps:
-  tmnationsforever:
-    command: bin/sommelier "$WINEPREFIX/drive_c/Program Files/TmNationsForever/TmForever.exe"
+  tmunitedforever:
+    command: bin/sommelier "$WINEPREFIX/drive_c/Program Files/TmUnitedForever/TmForever.exe"
     environment:
       WINEPREFIX: "$SNAP_USER_COMMON/.wine"
       DLLOVERRIDES: "mscoree,mshtml=" # Prevent pop-ups about Wine Mono and Wine Gecko
-      INSTALL_URL: "http://files.trackmaniaforever.com/tmnationsforever_setup.exe"
+      INSTALL_URL: "http://files.trackmaniaforever.com/tmnunitedforever_setup.exe"
       VIRTDESKTOP: 1
       LC_ALL: "C.UTF-8"
     plugs:
@@ -40,11 +40,11 @@ apps:
       - wayland
       - x11
   launcher:
-    command: bin/sommelier "$WINEPREFIX/drive_c/Program Files/TmNationsForever/TmForeverLauncher.exe"
+    command: bin/sommelier "$WINEPREFIX/drive_c/Program Files/TmUnitedForever/TmForeverLauncher.exe"
     environment:
       WINEPREFIX: "$SNAP_USER_COMMON/.wine"
       DLLOVERRIDES: "mscoree,mshtml=" # Prevent pop-ups about Wine Mono and Wine Gecko
-      INSTALL_URL: "http://files.trackmaniaforever.com/tmnationsforever_setup.exe"
+      INSTALL_URL: "http://files.trackmaniaforever.com/tmunitedforever_setup.exe"
       VIRTDESKTOP: 1
       LC_ALL: "C.UTF-8"
     plugs:
@@ -214,7 +214,7 @@ parts:
     after:
       - enable-i386
 
-  tmnationsforever:
+  tmunitedforever:
     plugin: dump
     source: scripts
     organize:
