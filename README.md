@@ -6,7 +6,7 @@
 
 <p align="center"><b>This is the modified snap for Trackmania United Forever</b>. It's been tested in Ubuntu 18.04 so far, but since no substantial changes have been made, it should work with other distros too. Feel free to unpack and compare with the original snap.</p>
 
-<p align="center">Published for <img src="http://anything.codes/slack-emoji-for-techies/emoji/tux.png" align="top" width="24" /> with :gift_heart: by Snapcrafters, modified by seffplusplus</p>
+<p align="center">Published for <img src="http://anything.codes/slack-emoji-for-techies/emoji/tux.png" align="top" width="24" /> with :gift_heart: by Snapcrafters, modified by seffs</p>
 
 <p align="center">
 EXPERIMENTAL!
