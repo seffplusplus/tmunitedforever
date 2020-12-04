@@ -23,5 +23,5 @@
 
 ## tmunitedforever: command not found
 
-  *  run 'snap run tmunitedforever' (You might have a bad installation, check snap in your $PATH)
+  *  run 'snap run tmunitedforever' (You might have a bad configuration, [add snap to your $PATH](https://askubuntu.com/a/1168083)) 
 
