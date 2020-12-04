@@ -1,0 +1,93 @@
+name: tmunitedforever
+title: TrackMania United Forever
+version: '2.11.26'
+summary: The most popular online PC racing game.
+description: |
+  The most popular online PC racing game. It fuels 7 different racing
+  environments; hundreds of thousands of tracks and millions of players to
+  compete with. You can download the car you are dreaming of, paint it, drive it
+  through insane tracks made of loopings, ramps and off roads. It is all about
+  you, your driving skills and the track in front of you.
+  .
+  Just to make sure we understand each other: this is pure arcade driving
+  madness.
+
+  *Note: This Windows application runs on Linux using the Wine compatibility layer.*
+grade: stable
+icon: snap/gui/tmunitedforever.png
+confinement: strict
+base: core18
+
+architectures:
+  - build-on: amd64
+
+environment:
+  WINEDLLOVERRIDES: "$WINEDLLOVERRIDES;mscoree,mshtml="    # Prevent pop-ups about Wine Mono and Wine Gecko
+
+apps:
+  tmunitedforever:
+    extensions: [ gnome-3-28 ]
+    command: bin/sommelier run-exe
+    environment:
+      RUN_EXE: "C:/Program Files (x86)/TmUnitedForever/TmForever.exe"
+      INSTALL_URL: "http://files.trackmaniaforever.com/tmunitedforever_setup.exe"
+      INSTALL_FLAGS: "/silent"
+      SOMMELIER_VIRTDESKTOP: 1
+    plugs:
+      - home
+      - network
+      - network-bind
+      - opengl
+      - audio-playback
+      - joystick
+  launcher:
+    extensions: [ gnome-3-28 ]
+    command: bin/sommelier run-exe
+    environment:
+      RUN_EXE: "C:/Program Files (x86)/TmUnitedForever/TmForeverLauncher.exe"
+      SOMMELIER_VIRTDESKTOP: 1
+    plugs:
+      - home
+      - network
+      - network-bind
+      - opengl
+      - audio-playback
+      - joystick
+  # The wine command can be used to run applications inside the wine
+  # environment that this snap uses.
+  #
+  # For example, users can configure the wine environment of this snap
+  # by running `myapp.wine winecfg`.
+  wine:
+    extensions: [ gnome-3-28 ]
+    command: bin/sommelier
+    plugs:
+      - home
+      - network
+  # The winetricks command can be used to run winetricks inside the wine
+  # environment that this snap uses.
+  winetricks:
+    extensions: [ gnome-3-28 ]
+    command: bin/sommelier winetricks
+    plugs:
+      - network
+
+parts:
+  # The sommelier script helps you snap Windows applications using Wine. It 
+  # initializes and configures Wine and installs the Windows application.
+  sommelier-core:
+    plugin: make
+    source: https://github.com/snapcrafters/sommelier-core.git
+    source-branch: "1.0"
+
+# These plugs are used to connect the snap to the wine runtime.
+plugs:
+  wine-runtime:
+    interface: content
+    target: $SNAP/wine-runtime
+    default-provider: wine-platform-runtime
+  # We use Wine 3 because the framerate is higher compared to newer versions
+  wine-3-stable:
+    interface: content
+    target: $SNAP/wine-platform
+    default-provider: wine-platform-3-stable
