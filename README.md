@@ -23,8 +23,5 @@
 
 ## tmunitedforever: command not found
 
-  *  Navigate to /var/lib/snapd/desktop/applications
-  *  Execute TmUnitedForever
-  *  Wait for installation to complete
-  *  (Once up and running, right-click and add to Favorites)
+  *  run 'snap run tmunitedforever' (You might have a bad installation, check snap in your $PATH)
 
